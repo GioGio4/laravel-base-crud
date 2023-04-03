@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('main_content')
-    <section class="container my-5">
+    <section class="container">
+        <h2 class="text-center my-3">SONGS LIST</h2>
         <table class="table table-primary table-striped">
             <thead>
                 <tr>
@@ -12,6 +13,7 @@
                     <th scope="col">Editor</th>
                     <th scope="col">Length</th>
                     <th scope="col">Poster</th>
+                    <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,6 +27,7 @@
                         <td>{{ $song->editor }}</td>
                         <td>{{ $song->length }}</td>
                         <td>{{ $song->poster }}</td>
+                        <td><a href="{{ route('songs.show', ['song' => $song]) }}">Detail</a></td>
                     </tr>
                 @endforeach
 
