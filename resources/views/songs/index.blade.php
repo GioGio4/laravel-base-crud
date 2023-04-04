@@ -3,6 +3,8 @@
 @section('main_content')
     <section class="container">
         <h2 class="text-center my-3">SONGS LIST</h2>
+
+        <a href="{{ route('songs.create') }}" class="btn btn-outline-primary mb-3">Add new Song</a>
         <table class="table table-primary table-striped">
             <thead>
                 <tr>

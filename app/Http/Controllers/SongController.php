@@ -25,7 +25,7 @@ class SongController extends Controller
      */
     public function create()
     {
-        //
+        return view('songs.create');
     }
 
     /**
@@ -36,7 +36,18 @@ class SongController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $data = $request->all();
+
+        $song = new Song;
+        $song->title = $data['title'];
+        $song->album = $data['album'];
+        $song->author = $data['author'];
+        $song->editor = $data['editor'];
+        $song->length = $data['length'];
+        $song->poster = $data['poster'];
+
+        $song->save();
     }
 
     /**
