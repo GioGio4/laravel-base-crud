@@ -48,6 +48,7 @@ class SongController extends Controller
         $song->poster = $data['poster'];
 
         $song->save();
+        return redirect()->route('songs.show', $song);
     }
 
     /**
